@@ -1,0 +1,24 @@
+@echo off
+setlocal
+
+where python >nul 2>&1
+if errorlevel 1 (
+    echo Error: python not found. Install Python 3.10+ from https://www.python.org
+    exit /b 1
+)
+
+echo Creating virtual environment...
+python -m venv .venv
+
+echo Installing LibreTranslate...
+.venv\Scripts\pip install --upgrade pip -q
+.venv\Scripts\pip install libretranslate
+
+echo Downloading English-Spanish language models (this may take a few minutes)...
+.venv\Scripts\argospm install translate-en_es
+.venv\Scripts\argospm install translate-es_en
+
+echo.
+echo Setup complete.
+echo   - Double-click create-shortcut.vbs to add LibreTranslate to your Desktop, or
+echo   - run run.bat directly from this folder.
