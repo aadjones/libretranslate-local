@@ -17,6 +17,6 @@ echo.
 echo Press Ctrl+C to stop the server.
 echo.
 
-start "" /b cmd /c "timeout /t 4 /nobreak >nul && start http://127.0.0.1:5000"
+start "" /b cmd /c "timeout /t 20 /nobreak >nul && start http://127.0.0.1:5000"
 
 .venv\Scripts\libretranslate --load-only en,es

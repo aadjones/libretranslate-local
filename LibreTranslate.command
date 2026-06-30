@@ -14,6 +14,6 @@ echo ""
 echo "Press Ctrl+C to stop the server."
 echo ""
 
-(sleep 3 && open http://127.0.0.1:5000) &
+(until curl -s http://127.0.0.1:5000/ > /dev/null 2>&1; do sleep 1; done && open http://127.0.0.1:5000/) &
 
 .venv/bin/libretranslate --load-only en,es
