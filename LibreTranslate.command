@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -e
-cd "$(dirname "$0")"
+cd "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 if [ ! -d ".venv" ]; then
   osascript -e 'display alert "Setup required" message "Open Terminal, run setup.sh, then try again."' 2>/dev/null \
