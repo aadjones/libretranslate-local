@@ -9,11 +9,11 @@ if [ ! -d ".venv" ]; then
 fi
 
 echo "Starting LibreTranslate (English ↔ Spanish)..."
-echo "Opening http://127.0.0.1:5000 in a moment."
+echo "Opening http://127.0.0.1:5001 in a moment."
 echo ""
 echo "Press Ctrl+C to stop the server."
 echo ""
 
-(until [ "$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:5000/)" = "200" ]; do sleep 1; done && open http://127.0.0.1:5000/) &
+(until [ "$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:5001/)" = "200" ]; do sleep 1; done && open http://127.0.0.1:5001/) &
 
-.venv/bin/libretranslate --load-only en,es
+.venv/bin/libretranslate --port 5001 --load-only en,es

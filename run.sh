@@ -6,6 +6,6 @@ if [ ! -d ".venv" ]; then
   exit 1
 fi
 
-echo "Starting LibreTranslate at http://127.0.0.1:5000 ..."
+echo "Starting LibreTranslate at http://127.0.0.1:5001 ..."
 echo ""
-.venv/bin/libretranslate --load-only en,es
+.venv/bin/libretranslate --port 5001 --load-only en,es

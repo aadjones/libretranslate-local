@@ -12,11 +12,11 @@ for /f "delims=" %%i in ('.venv\Scripts\python -c "import certifi; print(certifi
 set REQUESTS_CA_BUNDLE=%SSL_CERT_FILE%
 
 echo Starting LibreTranslate (English ^<^> Spanish)...
-echo Opening http://127.0.0.1:5000 in a moment.
+echo Opening http://127.0.0.1:5001 in a moment.
 echo.
 echo Press Ctrl+C to stop the server.
 echo.
 
-start "" /b cmd /c "timeout /t 20 /nobreak >nul && start http://127.0.0.1:5000"
+start "" /b cmd /c "timeout /t 20 /nobreak >nul && start http://127.0.0.1:5001"
 
-.venv\Scripts\libretranslate --load-only en,es
+.venv\Scripts\libretranslate --port 5001 --load-only en,es

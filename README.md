@@ -40,12 +40,12 @@ Setup downloads the English↔Spanish models (~150 MB total) via `argospm`. This
 
 ## Usage
 
-Once running, the server exposes a REST API and a web UI at `http://localhost:5000`.
+Once running, the server exposes a REST API and a web UI at `http://localhost:5001`.
 
 **Example API call:**
 
 ```bash
-curl -X POST http://localhost:5000/translate \
+curl -X POST http://localhost:5001/translate \
   -H "Content-Type: application/json" \
   -d '{"q": "Hello, world!", "source": "en", "target": "es"}'
 ```
