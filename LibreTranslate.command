@@ -9,11 +9,11 @@ if [ ! -d ".venv" ]; then
 fi
 
 echo "Starting LibreTranslate (English ↔ Spanish)..."
-echo "Opening http://localhost:5000 in a moment."
+echo "Opening http://127.0.0.1:5000 in a moment."
 echo ""
 echo "Press Ctrl+C to stop the server."
 echo ""
 
-(sleep 3 && open http://localhost:5000) &
+(sleep 3 && open http://127.0.0.1:5000) &
 
 .venv/bin/libretranslate --load-only en,es
