@@ -12,7 +12,7 @@ Run [LibreTranslate](https://libretranslate.com)—a free, open-source machine t
 ### Mac
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/libretranslate-local.git
+git clone https://github.com/aadjones/libretranslate-local.git
 cd libretranslate-local
 chmod +x setup.sh run.sh
 ./setup.sh
@@ -25,7 +25,7 @@ After setup, **double-click `LibreTranslate.command`** in Finder to start the se
 ### Windows
 
 ```bat
-git clone https://github.com/YOUR_USERNAME/libretranslate-local.git
+git clone https://github.com/aadjones/libretranslate-local.git
 cd libretranslate-local
 setup.bat
 ```
