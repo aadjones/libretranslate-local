@@ -8,6 +8,9 @@ if not exist ".venv" (
     exit /b 1
 )
 
+for /f "delims=" %%i in ('.venv\Scripts\python -c "import certifi; print(certifi.where())"') do set SSL_CERT_FILE=%%i
+set REQUESTS_CA_BUNDLE=%SSL_CERT_FILE%
+
 echo Starting LibreTranslate (English ^<^> Spanish)...
 echo Opening http://127.0.0.1:5000 in a moment.
 echo.
